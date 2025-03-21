@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社群二维码</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: '微软雅黑', sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .qrcode-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .qrcode-section {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .redshu-section {
+            border-right: 2px solid #eee;
+        }
+
+        .qrcode-section h2 {
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 18px;
+        }
+
+        .qrcode-img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .description {
+            margin-top: 20px;
+            color: #999;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .qrcode-container {
+                flex-direction: column;
+            }
+
+            .redshu-section {
+                border-right: none;
+                border-bottom: 2px solid #eee;
+                padding-bottom: 40px;
+            }
+
+            .qrcode-section {
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>扫码加入我们的社群</h1>
+        <div class="qrcode-container">
+            <!-- 左边小红书群 -->
+            <div class="qrcode-section redshu-section">
+                <h2>小红书群聊</h2>
+                <img src="redshu-qrcode.jpg" alt="小红书群二维码" class="qrcode-img">
+                <p class="description">打开小红书扫一扫<br>加入我们的兴趣群组</p>
+            </div>
+
+            <!-- 右边微信群 -->
+            <div class="qrcode-section">
+                <h2>微信交流群</h2>
+                <img src="wechat-qrcode.jpg" alt="微信群二维码" class="qrcode-img">
+                <p class="description">使用微信扫一扫<br>加入即时交流群</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
